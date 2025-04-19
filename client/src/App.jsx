@@ -1,7 +1,22 @@
-import React from 'react'
-
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home'
+import Profile from './pages/Profile'
+import Signin from './pages/Signin'
+import Signup from './pages/Signup'
+import Terms from './pages/Terms'
+import About from './pages/About'
 export default function App() {
   return (
-    <div className='flex items-center justify-center h-screen'>App</div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/signin" element={<Signin/>}/>
+        <Route path="/signup" element={<Signup/>}/>
+        <Route path="/terms" element={<Terms/>}/>
+        <Route path="/about" element={<About/>}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
