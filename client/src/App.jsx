@@ -11,9 +11,10 @@ import Marketplace from "./pages/Marketplace";
 import Guides from "./pages/Guides";
 import Blogs from "./pages/Blogs";
 import Contact from "./pages/contact";
+import Footer from "./components/Footer";
 export default function App() {
   return (
-    <div className="bg-[linear-gradient(135deg,#984D38_0%,#6B3D3B_22%,#3B2B3F_46%,#2B2540_54%,#181E41_63%,#181E41_93%,#181E41_97%)] text-[#e7eef4]">
+    <div className="bg-[linear-gradient(to_right,#3A1C3D_0%,#2A1E45_50%,#1A1F52_100%)] text-[#e7eef4]">
       <BrowserRouter>
         <Header />
         <Routes>
@@ -28,6 +29,7 @@ export default function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
+        <Footer/>
       </BrowserRouter>
     </div>
   );
