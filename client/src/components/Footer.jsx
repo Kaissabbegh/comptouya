@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <>
-      <footer className="flex flex-col lg:flex-row justify-around items-start  lg:items-center pb-10 lg:pb-20 px-4 sm:px-6 lg:px-8 pt-10 relative bg-[linear-gradient(to_right,transparent_2%,rgba(255,255,255,0.3)_10%,rgba(255,255,255,0.3)_90%,transparent_98%)] bg-no-repeat bg-top bg-[length:100%_1px] gap-8 lg:gap-0">
+      <footer className="flex flex-wrap justify-around items-start  lg:items-center pb-10 lg:pb-20 px-4 sm:px-6 lg:px-8 pt-10 relative bg-[linear-gradient(to_right,transparent_2%,rgba(255,255,255,0.3)_10%,rgba(255,255,255,0.3)_90%,transparent_98%)] bg-no-repeat bg-top bg-[length:100%_1px] gap-8 lg:gap-0">
         {/* Brand Info */}
         <div className="max-w-xs">
           <Link to="/" className="text-[20px] flex items-center">

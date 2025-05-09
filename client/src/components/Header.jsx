@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export default function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
@@ -40,7 +40,11 @@ export default function Header() {
           </button>
 
           <Link to="/" className="text-[20px] flex items-center">
-            <img src="src/assets/Logo.png" alt="Comptouya Logo" className="h-8 w-auto" />
+            <img
+              src="src/assets/Logo.png"
+              alt="Comptouya Logo"
+              className="h-8 w-auto"
+            />
             <div
               className="text-lg md:text-[20px] font-bold bg-clip-text text-transparent ml-2"
               style={{
@@ -54,22 +58,57 @@ export default function Header() {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex gap-4 p-3 bg-white/15 rounded-full">
-          <Link to="/" className="hover:text-purple-300 transition-colors">
+        <nav className="hidden lg:flex gap-4 px-10 py-3 bg-white/15 rounded-full">
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-purple-300 transition-colors"
+                : "hover:text-purple-300 transition-colors"
+            }
+          >
             Home
-          </Link>
-          <Link to="/marketplace" className="hover:text-purple-300 transition-colors">
+          </NavLink>
+          <NavLink
+            to="/marketplace"
+            className={({ isActive }) =>
+              isActive
+                ? "text-purple-300 transition-colors"
+                : "hover:text-purple-300 transition-colors"
+            }
+          >
             Marketplace
-          </Link>
-          <Link to="/knowledge" className="hover:text-purple-300 transition-colors">
+          </NavLink>
+          <NavLink
+            to="/knowledge"
+            className={({ isActive }) =>
+              isActive
+                ? "text-purple-300 transition-colors"
+                : "hover:text-purple-300 transition-colors"
+            }
+          >
             Knowledge Base
-          </Link>
-          <Link to="/blogs" className="hover:text-purple-300 transition-colors">
+          </NavLink>
+          <NavLink
+            to="/blogs"
+            className={({ isActive }) =>
+              isActive
+                ? "text-purple-300 transition-colors"
+                : "hover:text-purple-300 transition-colors"
+            }
+          >
             Blogs
-          </Link>
-          <Link to="/contact" className="hover:text-purple-300 transition-colors">
+          </NavLink>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive
+                ? "text-purple-300 transition-colors"
+                : "hover:text-purple-300 transition-colors"
+            }
+          >
             Support
-          </Link>
+          </NavLink>
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-4">
@@ -109,7 +148,10 @@ export default function Header() {
                   </button>
                 </div>
               ) : (
-                <button onClick={toggleSearch} className="p-1 focus:outline-none">
+                <button
+                  onClick={toggleSearch}
+                  className="p-1 focus:outline-none"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -143,36 +185,36 @@ export default function Header() {
       {isMenuOpen && (
         <div className="lg:hidden bg-gray-900/95 backdrop-blur-sm w-full absolute z-50 py-4 px-6">
           <nav className="flex flex-col gap-4">
-            <Link 
-              to="/" 
+            <Link
+              to="/"
               className="hover:text-purple-300 transition-colors py-2 border-b border-gray-700"
               onClick={toggleMenu}
             >
               Home
             </Link>
-            <Link 
-              to="/marketplace" 
+            <Link
+              to="/marketplace"
               className="hover:text-purple-300 transition-colors py-2 border-b border-gray-700"
               onClick={toggleMenu}
             >
               Marketplace
             </Link>
-            <Link 
-              to="/knowlegde" 
+            <Link
+              to="/knowlegde"
               className="hover:text-purple-300 transition-colors py-2 border-b border-gray-700"
               onClick={toggleMenu}
             >
               Knowledge Base
             </Link>
-            <Link 
-              to="/blogs" 
+            <Link
+              to="/blogs"
               className="hover:text-purple-300 transition-colors py-2 border-b border-gray-700"
               onClick={toggleMenu}
             >
               Blogs
             </Link>
-            <Link 
-              to="/contact" 
+            <Link
+              to="/contact"
               className="hover:text-purple-300 transition-colors py-2 border-b border-gray-700"
               onClick={toggleMenu}
             >
